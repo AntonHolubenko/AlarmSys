@@ -40,11 +40,11 @@ EthernetClient client;
 
 char server[] = "siren.pp.ua";// also change the Host line in httpRequest()
 char host[] = "Host: siren.pp.ua";
-char command[] = "GET /api/v3/alerts/607 HTTP/1.1";
+char command[] = "GET /api/v3/alerts/0 HTTP/1.1";
 //IPAddress server(64,131,82,241);
 
 unsigned long lastConnectionTime = 0;           // last time you connected to the server, in milliseconds
-const unsigned long stateIntervalSecond = 60;
+const unsigned long stateIntervalSecond = 10;
 
 uint8_t CONTROL_PIN_1 = 13;
 
