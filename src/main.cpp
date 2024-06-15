@@ -159,15 +159,19 @@ void loop() {
     if (millis() - lastConnectionTime > stateIntervalSecond * 1000) {
         switch (httpRequest()) {
             case 0: // request error
+                Serial.println("request error");
                 digitalWrite(CONTROL_PIN_1, LOW);
                 break;
             case 1: // response error
+                Serial.println("response error");
                 digitalWrite(CONTROL_PIN_1, LOW);
                 break;
             case 2: // not alarm
+                Serial.println("not alarm");
                 digitalWrite(CONTROL_PIN_1, HIGH);
                 break;
             case 3: // alarm
+                Serial.println("alarm");
                 digitalWrite(CONTROL_PIN_1, HIGH);
                 break;
         }
